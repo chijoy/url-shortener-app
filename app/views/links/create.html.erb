@@ -1,0 +1,12 @@
+<h1>Shorten it!</h1>
+
+<%= form_tag "/links/#{@link.id}", method: :patch do %>
+  <div>
+    <%= label_tag :url %>
+    <%= text_field_tag :url, @link.url %>
+  </div>
+  
+  <div>
+    <%= submit_tag "Shorten it!" %>
+  </div>
+<% end %>
